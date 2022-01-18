@@ -21,7 +21,8 @@ public class MemberValidator implements Validator {
 	}
 	/*
 	validate(매개변수1, 매개변수2)
-		: supports()가 true를 반환하는 경우에만 호출되는 메소드로 실제 폼값에 대한 검증을 진행한다.
+		: supports()가 true를 반환하는 경우에만 호출되는 메소드.
+		  실제 폼값에 대한 검증을 진행한다.
 		
 	 - 매개변수1 : 폼값을 저장한 커맨드객체
 	 - 매개변수2 : 에러정보를 저장할 Errors타입의 변수
@@ -49,8 +50,9 @@ public class MemberValidator implements Validator {
 			  validate()메소드 내부로 진입자체가 불가능하다.
 			  supports()를 통해 문제없이 validate()가 호출되었을 때 사용가능함.
 			  해당 함수에서 pw라는 문자열은 getter()메소드를 통해
-			  DTO에 해당 이름의 변수에 저장된 패스워드를 얻어오게 된다.
+			  DTO에서 해당 이름의 변수에 저장된 값을 얻어온다.
 			  (pw는 실제로 저장되어있는 값이다.)
+			  문제가 생겼을 때에는 pwError라는 이름으로 에러메세지를 저장한다.
 		 */
 		
 		// 검증3 : 사용자정의 메소드를 통해 검증 (이름 검증)
